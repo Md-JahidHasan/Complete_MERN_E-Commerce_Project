@@ -2,6 +2,8 @@
 const mongoose = require('mongoose')
 
 // Connect to MongoDB
+// H@$k$yHf$36c2JJ
+// completeMERNstakeEcommerceDB
 const mongooseConnection = async () => {
   try {
     const OPTIONS = {
@@ -10,9 +12,9 @@ const mongooseConnection = async () => {
       user: '',
       pass: '',
     }
-    await mongoose.connect(process.env.MONGODB_URI, OPTIONS)
+    await mongoose.connect(`mongodb+srv://completeMERNstakeEcommerceDB:H%40$k$yHf$36c2JJ@cluster0.ptptzcl.mongodb.net/completeMernStakeProjectDB?retryWrites=true&w=majority`)
     console.log(
-      `MongoDB Successfully Connected with ${mongoose.connection.name}`.green
+      `MongoDB Successfully Connected with-- ${mongoose.connection.name}`.green
         .bold
     )
   } catch (error) {
@@ -22,4 +24,5 @@ const mongooseConnection = async () => {
 }
 
 // Module Connection:
+
 module.exports = { mongooseConnection }

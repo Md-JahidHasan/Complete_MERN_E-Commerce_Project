@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node app.js",
     "dev": "NODE_ENV=development nodemon app.js"
   },
-  "author": "Nazmul Huda",
+  "author": "Md. Jahid Hasan",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",

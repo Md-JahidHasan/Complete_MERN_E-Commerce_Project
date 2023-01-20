@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
+const port = 5000;
 
 // Internal Modules:
 const {
@@ -46,6 +47,6 @@ app.use(notFoundHandler)
 app.use(errorHandler)
 
 // Start the server
-app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}`.rainbow.bold)
+app.listen(port, () =>
+  console.log(`Example app listening on port ${port}`.rainbow.bold)
 )

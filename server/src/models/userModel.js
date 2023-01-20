@@ -49,6 +49,8 @@ userSchema.pre('findOneAndUpdate', async function (next) {
  * @param {number} - milisecond Expriration Time
  * @returns token
  */
+
+
 userSchema.methods.generateJwtToken = function (
   userObject,
   secret = process.env.JWT_SECRET,
@@ -59,6 +61,7 @@ userSchema.methods.generateJwtToken = function (
   })
 }
 
+
 /**
  * @desc Compare Password Function
  * @param {String} user input password
@@ -68,7 +71,10 @@ userSchema.methods.checkPassword = async function (password) {
   return await bcrypt.compare(password, this.password)
 }
 
+
 // User Model:
 const User = mongoose.model('User', userSchema)
+
+
 
 module.exports = User
